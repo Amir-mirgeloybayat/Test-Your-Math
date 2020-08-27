@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout_app"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button_go"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_go"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Go!"
+            android:textSize="50sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar_game_range"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_below="@id/textView_game_range_prompt"
+            android:layout_margin="32dp"
+            android:layout_height="wrap_content"
+            android:background="@color/button_answer1_color_end"/>
+
+        <TextView
+            android:id="@+id/textView_game_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:layout_below="@id/seekBar_game_range"
+            android:layout_centerHorizontal="true"
+            android:background="@color/color_fields"
+            android:text=""
+            />
+
+        <TextView
+            android:id="@+id/textView_game_range_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:text="Pick a range for the game"
+            android:textSize="30dp"
+            android:background="@color/color_fields"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ListView
+            android:id="@+id/listView_game_choice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:background="@color/color_fields"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textView_game_range"
+            android:layout_marginBottom="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/textView_game_choice"
+            android:textSize="30sp"
+            android:background="@color/color_fields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="130dp"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
